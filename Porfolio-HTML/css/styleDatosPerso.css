@@ -1,0 +1,233 @@
+.padre{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 5%, #2f358f 44%, #176463 72%, #000000 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+    .porfolio{
+        border-radius: 20px;
+        width: 800px;
+        background: rgba(1,1,1, 0.7);
+        position: fixed;
+        box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    }
+    .active{
+        background: rgba(1,1,1, 0.3);
+    }
+        nav{
+            width: 100%;
+            margin-left: 15px;
+            padding: 12.5px 0px;
+        }
+
+        .menu ul li{
+           display: inline;
+           padding-left: 10px;
+           border: 1px solid transparent;
+           padding: 10px 19px;
+           border-radius: 4px;
+           transition: box-shadow 1.5s;
+           cursor: pointer;
+        }
+
+        .menu ul li:hover{
+            box-shadow: 0px 0px 25px #65ffe0;
+        }
+
+        .selec{
+            display: inline;
+        }
+
+        a{
+            font-family: 'Unica One', sans-serif;
+            text-decoration: none;
+            color: #00ffc8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+    
+        .contenedor{
+            height: 400px;
+            display:grid;
+            grid-template-rows: 1fr 120px;
+            grid-template-columns:repeat(2, 1fr); 
+            color: rgb(206, 230, 250);
+        }
+            .descripcion{
+                padding:0px 40px;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                animation: efecto1 1s ease-in;
+            }
+
+            .descripcion h3{
+                text-align: center;
+            }
+
+            .datos{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-column: 1/2;
+                grid-row: 2/3;
+                animation: efecto1 1s ease-in;
+            }
+                .datos1{
+                    padding-left: 10px;
+                }
+                .datosPersonales li{
+                    text-decoration: none;
+                    color: #3843d1;
+                    animation: efecto1 1s ease-in;
+                }
+                .datos li{
+                    color: #3843d1;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                span{
+                    color: rgb(173, 174, 175);
+                    font-weight: 100;
+                }
+                .negrita{
+                    background-color: #040518;
+                    padding-left: 10px;
+                    border-radius: 5px;
+                    
+                }
+                .solu{
+                    color: rgb(173, 174, 175);
+                    font-size: 14px;
+                }
+
+            .datosPersonales{
+                padding: 40px;
+                grid-column: 2/3;
+                grid-row: 1/3;
+            }
+
+            @keyframes efecto1 {
+                from {
+                    color: transparent;
+                    transform: translateX(-20%);
+                }
+                to {
+                    transform: translateX(0);
+                }
+            }
+            h3{
+                font-family: 'Poiret One', sans-serif;
+                font-size: 30px;
+                margin-bottom: -10px;
+                color: #00ffb3;
+            }
+
+            /* Proyectos */
+    .proyectos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 370px;
+    }
+
+    .repositorio {
+        position: relative;
+        overflow: hidden;
+        margin: 20px;
+        padding: 10px;
+        animation: efecto2 2s ease-in;
+    }
+
+    @keyframes efecto2 {
+        from {
+            filter: opacity(0);
+            transform: translateY(20%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .repositorio img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: brightness(0.3); 
+        transition: filter 0.3s;
+        border-radius: 10px;
+        border: 1.5px solid white;
+
+    }
+
+    .repositorio:hover img {
+        filter: brightness(1); 
+        box-shadow: 0px 0px 11px rgb(0, 255, 179);
+
+    }
+
+    .repositorio p {
+        position: absolute;
+        text-align: center;
+        color: white;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    .repositorio:hover p {
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .paginacion{
+        display: flex;
+        justify-content: center;
+    }
+
+    .paginacion a{
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .paginacion a:hover{
+        color: #176463;
+        cursor: pointer;
+    } 
+
+    /* habilidadesTecnicas */
+
+.contenedor2{
+    height: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    animation: efecto2 2s ease-out;
+}
+
+    .skill{
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.678);
+        border-radius: 10px;
+        width: 280px;
+        padding: 5px;
+        margin: 10px;
+ 
+    }
+    .skill p{
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #684fd8;
+        font-weight: bold;
+    }
+    .skill li{
+        color:#ffffff;
+    }
+
+

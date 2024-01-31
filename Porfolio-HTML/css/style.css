@@ -1,0 +1,185 @@
+        .padre{
+            background-color: #000000;
+            background-image: linear-gradient(315deg, #000000 5%, #2f358f 44%, #176463 72%, #000000 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+            .porfolio{
+                border-radius: 20px;
+                width: 800px;
+                background: rgba(1,1,1, 0.7);
+                position: fixed;
+                box-shadow: 20px 20px 20px rgb(0, 0, 0);
+            }
+            .active{
+                background: rgba(1,1,1, 0.3);
+            }
+                nav{
+                    width: 100%;
+                    margin-left: 15px;
+                    padding: 12.5px 0px;
+                }
+        
+                .menu ul li{
+                   display: inline;
+                   padding-left: 10px;
+                   border: 1px solid transparent;
+                   padding: 10px 19px;
+                   border-radius: 4px;
+                   transition: box-shadow 1.5s;
+                   cursor: pointer;
+                }
+        
+                .menu ul li:hover{
+                    box-shadow: 0px 0px 25px #65ffe0;
+                }
+        
+                .selec{
+                    display: inline;
+                }
+        
+                a{
+                    font-family: 'Unica One', sans-serif;
+                    text-decoration: none;
+                    color: #00ffc8;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                }
+
+        button{
+            color: #00ffc8;
+            text-align: center;
+            border: 1px solid #03785e;
+            border-radius: 5px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 0 #03785e;
+            cursor: pointer;
+            transition: ease-out 2s;
+        }
+
+        button:hover{
+            border-radius: 3px;
+            box-shadow: inset 400px 0 0 0 #03785e;
+        }
+    
+        .contenedor{
+            height: 400px;
+            display:grid;
+            grid-template-rows: 1fr 90px;
+            grid-template-columns:repeat(2, 1fr); 
+            grid-template-areas: 
+            "nombre foto"
+            "footer footer";
+        }
+
+    .nombre{
+        grid-area: nombre;
+        display: grid;
+        align-content: center;
+        text-align: center;
+        color: antiquewhite;
+    }
+        h1{
+            margin-right: 20px;
+            animation: efecto1 0.75s ease-in-out; 
+        }
+        
+        @keyframes efecto1 {
+            from {
+                color: transparent;
+                transform: translateX(-20%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        h3{
+            animation: efecto1 1.35s ease-in-out; 
+        }
+
+    .foto{
+        grid-area: foto;
+        justify-items: center;
+        display: grid;
+        align-items: center;
+    }
+    .foto img{
+        width: 45%;
+        animation: efecto1 0.75s ease-in-out; 
+    }
+    .footer{
+        grid-area: footer;
+    }
+
+    .redes-sociales{
+        display: grid;
+        gap:0px 35px;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0px 30px;
+    }
+
+    .redes-sociales-symbol{
+        margin:15px 0px;
+        background: #00ffc8;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);         
+    }
+
+    .redes-sociales-symbol i{
+        font-size: 30px;
+        
+    }
+    .redes-sociales-symbol:hover{
+        animation: rotar 0.7s ease-in-out;
+        cursor: pointer;
+    }
+
+    .active{
+        background: rgba(1,1,1, 0.3);
+    }
+    
+    @keyframes rotar {
+        from {
+            transform: rotateY(0deg);
+        }
+        25% {
+            transform: rotateY(180deg);
+        }
+        50% {
+            transform: rotateY(360deg);
+        }
+        75% {
+            transform: rotateY(180deg);
+        }
+        to {
+            transform: rotateY(0deg);
+        }
+    }
+
+    .redes-sociales{
+        padding-left: 30px;
+    }
+
+
+    /* Proyectos */
+    .proyectos{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .repositorio img{
+        
+    }
+
+    .repositorio p{
+        font-size: 11px;
+        color: #00ffc8;
+    }
